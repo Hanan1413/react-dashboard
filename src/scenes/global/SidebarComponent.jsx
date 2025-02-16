@@ -185,7 +185,7 @@ const SidebarComponent = () => {
             />
             <Item
               title="FAQ Page"
-              to="/"
+              to="/faq"
               icon={<HelpOutlineOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -209,7 +209,7 @@ const SidebarComponent = () => {
             />
             <Item
               title="Line Chart"
-              to="/"
+              to="/line"
               icon={<TimelineOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
