@@ -9,11 +9,11 @@ import Header from "../../components/Header";
 const Line = () => {
   return (
     <Box>
-        <Header />
+        <Header title="line Chart"/>
         <Box  height="75vh">
         <LineChart />
 
-
+ 
         </Box>
     </Box>
   )

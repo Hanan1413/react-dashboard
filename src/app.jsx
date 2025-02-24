@@ -14,8 +14,9 @@ import Bar from "./scenes/bar";
 import Line from "./scenes/line";
 import Pie from "./scenes/pie";
 import FAQ from "./scenes/faq";
-// import Geography from "./scenes/geography";
+import Geography from "./scenes/geography";
 import Calendar from "./scenes/calendar";
+import Layout from "./scenes/global/Layout";
 
 
 function App() {
@@ -26,12 +27,13 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className="app">
-            <SidebarComponent />
+       
             <div className="content">
             <Topbar />
 
             <Routes>
-              <Route path="/" element={<Dashboarard />} />
+            <Route path="/" element={<Layout />}>
+            <Route index element={<Dashboarard />} />  
                <Route path="/team" element={<Team />} />
                <Route path="/contacts" element={<Contacts />} />
                <Route path="/invoices" element={<Invoices />} />
@@ -41,15 +43,15 @@ function App() {
               <Route path="/pie" element={<Pie />} />
               <Route path="/line" element={<Line />} />
               <Route path="/bar" element={<Bar />}  />
-             
+              <Route path="/geography" element={<Geography />} />
 
+             
+              </Route>
 
   
 
-              {/* 
-              <Route path="/geography" element={<Geography />} />
-              <Route path="/calendar" element={<Calendar />} />    */}
             </Routes>
+
             </div>
 
         </div>

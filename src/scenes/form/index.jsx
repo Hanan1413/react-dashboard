@@ -3,6 +3,9 @@ import { Formik } from "formik";
 import * as yup from "yup";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Header from "../../components/Header";
+import { tokens } from "../../theme";
+import { useTheme } from "@mui/material";
+
 
 const initialValues = (values) => {
   firstName;
@@ -30,6 +33,9 @@ const usrSchema = yup.object().shape({
 });
 
 const Form = () => {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+
   const isNonMobile = useMediaQuery("(min-width:600px)");
 
   const handleFormSubmit = (values) => {
@@ -147,7 +153,14 @@ const Form = () => {
             </Box>
 
             <Box mt="20px" display="flex" justifyContent="end">
-            <Button type="submit" color="secondary" variant="contained">
+              <Button
+                type="submit"
+                sx={{
+                  backgroundColor: colors.blueAccent[700],
+                  "&:hover": { backgroundColor:  colors.blueAccent[500]},
+                }}
+                variant="contained"
+              >
                 Create New User
               </Button>
             </Box>

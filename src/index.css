@@ -41,3 +41,8 @@ body,
 }
 
 
+.sidebarItem:active,
+.sidebarItem:focus {
+  background: transparent;
+  outline: none;
+}

@@ -63,14 +63,15 @@ const Invoices = () => {
             borderBottom: "none",
           },
           "& .name-column--cell": {
-            color: colors.greenAccent[300],
+            color: colors.blueAccent[400],
           },
           "& .MuiDataGrid-columnHeaders": {
             backgroundColor: colors.blueAccent[700],
             borderBottom: "none",
           },
           "& .MuiDataGrid-virtualScroller": {
-            backgroundColor: colors.primary[400],
+         backgroundColor: colors.primary[700],
+
           },
           "& .MuiDataGrid-footerContainer": {
             borderTop: "none",

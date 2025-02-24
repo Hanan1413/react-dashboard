@@ -55,7 +55,7 @@ const Calendar = () => {
         {/* Calendar Sidebar */}
         <Box
           flex="1 1 20%"
-          backgroundColor={colors.primary[400]}
+          backgroundColor={colors.blueAccent[900]}
           p="15px"
           borderRadius="4px"
         >
@@ -65,7 +65,7 @@ const Calendar = () => {
               <ListItem
                 key={event.id}
                 sx={{
-                  backgroundColor: colors.greenAccent[500],
+                  backgroundColor: colors.greenAccent[900],
                   margin: "10px 0",
                   borderRadius: "2px",
                 }}

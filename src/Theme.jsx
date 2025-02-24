@@ -38,7 +38,7 @@ export const tokens = (mode) => ({
           600: "#3da58a",
           700: "#2e7c67",
           800: "#1e5245",
-          900: "#0f2922",
+          900: "#182a52",
         },
         redAccent: {
           100: "#f8dcdb",
@@ -111,7 +111,7 @@ export const tokens = (mode) => ({
         blueAccent: {
           100: "#151632",
           200: "#2a2d64",
-          300: "#3e4396",
+          300: "#070933",
           400: "#535ac8",
           500: "#6870fa",
           600: "#868dfb",
@@ -142,7 +142,7 @@ export const themeSettings = (mode) => {
               light: colors.grey[100],
             },
             background: {
-              default: colors.primary[500],
+              default: colors.primary[700],
             },
           }
         : {
