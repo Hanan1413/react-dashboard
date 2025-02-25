@@ -16,6 +16,7 @@ import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutl
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
+import { dark } from "@mui/material/styles/createPalette";
 
 const Item = ({ link, title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
@@ -87,11 +88,12 @@ const SidebarComponent = () => {
         {/* Sidebar Menu */}
         <Sidebar
           collapsed={isCollapsed}
-          backgroundColor="#080b12"
+          backgroundColor={theme.palette.mode === "dark" ? "#080b12" : "#ffffff"}
           rootStyles={{
-            backgroundColor: "#080b12",
             background: "transparent",
             height: "100vh",
+            color: theme.palette.mode === "dark" ? "#ffffff" : "#000000",
+
 
           }}
           menuItemStyles={{
@@ -116,7 +118,7 @@ const SidebarComponent = () => {
           color: '#000',
         },
         "&:hover": {
-          backgroundColor: "#131929", // ✅ Removes white background on hover
+          backgroundColor: theme.palette.mode === dark ? "#131929" : "", // ✅ Removes white background on hover
           color: "#000", // Keeps text color black
         },
       },
